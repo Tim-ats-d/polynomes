@@ -47,6 +47,7 @@ def non_negative_number_check(nb: int):
     if nb <= 0:
         raise CalculationNotPossible("The value of A must be greater than 0.")
 
+
 def main():
     introduction_text()
 
@@ -63,20 +64,20 @@ def main():
         alpha = -val_B/2*val_A
         beta = -delta/4*val_A
 
-        print("Polynome have two solutions : x1 = %s and x2 = %s", sol_x1, sol_x2);
+        print("The polynomial has two solutions: x1 = %s and x2 = %s", sol_x1, sol_x2);
 
         print("Canonical form: %s(x - %s)^2 + %s"  % (val_a, alpha, beta))
         print("Factorized form: %s(x - %s)(x - %s)" % (val_a, sol_x1, sol_x2))
     elif delta < 0:
-        print("Polynome haven't solutions in real number")
-        print("No need to display the factorized form")
+        print("The polynomial has no solution in R.")
+        print("No need to display the factorized form.")
     elif delta == 0:
         sol_x0 = -val_b/2*val_a
 
         alpha = sol_x0
         beta = -delta/4*val_a
 
-        print("Polynome have one solutions : x0 = %s", sol_x0);
+        print("The polynomial has one solution : x0 = %s", sol_x0);
 
         print("Canonical form: %s(x - %s)^2 + %s" % (val_a, alpha, beta))
         print("Factorized form: %s(x - %s)^2" % (val_a, sol_x0))
